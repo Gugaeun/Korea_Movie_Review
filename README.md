@@ -15,7 +15,8 @@
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.lock.txt
-.\.venv\Scripts\python.exe run_pipeline.py          # 추천 데이터 준비 (CSV 필요, artifacts/에 저장)
+python clean_reviews.py                             # 글자가 지워진/너무 짧은 리뷰를 정리해 Koreanmovie_review_cleaned.csv 생성
+.\.venv\Scripts\python.exe run_pipeline.py --input Koreanmovie_review_cleaned.csv   # 추천 데이터 준비 (artifacts/에 저장)
 cd frontend
 npm.cmd ci --ignore-scripts                         # React 화면용 (선택). npm이 막히면 npm.cmd를 씁니다
 cd ..
