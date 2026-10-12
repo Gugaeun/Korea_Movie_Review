@@ -17,3 +17,4 @@ archive/rating_prediction/*
 archive/recommendation_reference/*
 !archive/recommendation_reference/*.py
 !archive/recommendation_reference/README.md
+!Koreanmovie_review.csv
